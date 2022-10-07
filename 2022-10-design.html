@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en-US"><head><title>ACF Zoom</title><meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="keywords" content="zoom, zoom.us, video conferencing, video conference, online meetings, web meeting, video meeting, cloud meeting, cloud video, group video call, group video chat, screen share, application share, mobility, mobile collaboration, desktop share, video collaboration, group messaging" /><meta name="description" content="Zoom unifies cloud video conferencing, simple online meetings, and cross platform group chat into one easy-to-use platform. Our solution offers the best video, audio, and screen-sharing experience across Zoom Rooms, Windows, Mac, iOS, Android, and H.323/SIP room systems." /><link rel="shortcut icon" href=https://www.zoomgov.com/zoom.ico /><style>
+        html, body {
+            margin: 0px;
+            font-family: 'Lato','Helvetica','Arial';
+            height: 100%
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            background-image: url(https://www.zoomgov.com/static/6.0.5099/image/gov/gov_bg.jpg);  /*customize background image*/
+            background-size: cover;
+            background-position: 41% -367px;
+            display: table;
+        }
+        .content-body {
+            display: table-cell;
+        }
+        a {
+            text-decoration: none;
+            color: #2470cc;
+        }
+        .content {
+            padding: 30px 120px 40px 140px;
+        }
+        .content .header{
+            padding: 50px 120px 40px 140px;
+            overflow: hidden;
+        }
+        .content .header .left{
+            float: left;
+        }
+        .content .header .right{
+            float: right;
+        }
+        .content h1 {
+            font-weight: bold;
+            color: #232333;
+            margin: 0;
+            padding: 31px 0;
+            font-size: 48px;
+            line-height: 58px;
+        }
+        .content h2{
+            color: #232333;
+            font-size: 20px;
+            line-height: 29px;
+            padding: 0 0 40px 0;
+            margin: 0;
+            font-weight: normal;
+        }
+        .content .meeting-button{
+            margin-bottom: 57px;
+        }
+        .content .meeting-button a {
+            height: 48px;
+            line-height: 48px;
+            border-radius: 12px;
+        }
+        .content .meeting-button .join-btn{
+            margin-right: 20px;
+            background-color: #0E71EB;
+            border-color: #0E71EB;
+        }
+        .content .meeting-button .join-btn:hover {
+            background-color: #2681F2;
+            border-color: #2681F2;
+        }
+        .content .meeting-button .join-btn:active {
+            background-color: #0C63CE;
+            border-color: #0C63CE;
+        }
+        .top-banner .btn {
+            position: absolute;
+            top: 15px;
+            right: 23px;
+            font-size: 24px;
+            color: #1C7E41;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+        }
+        .top-banner p {
+            vertical-align: middle;
+            margin: 21px 0;
+            color: #1C7E41;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        .button {
+            background-color: #0E71EB; /*customize button color */
+            border-color: #0E71EB;
+            padding: 0 40px;
+            line-height: 32px;
+            border-radius: 8px;
+            height: 32px;
+            display: inline-block;
+            text-align: center;
+            transition: .3s ease;
+        }
+        .button:hover {
+            background-color: #2681F2;  /*customize button color */
+        }
+        .button:active {
+            background-color: #0C63CE;
+        }
+        .button.login-btn{
+            margin-top: 25px;
+            padding: 0 55px;
+        }
+        .button.host-btn{
+            background: none;
+            border:1px solid #BABACC;
+        }
+        .button.host-btn:hover {
+            background: #E7F1FD;
+            border-color: #E7F1FD;
+        }
+        .button.host-btn:hover .btn-text {
+            color: #0E71EB;
+        }
+        .btn-text {
+            color: white;   /*customize button font color */
+            font-weight: bold;
+        }
+        .button.login-btn .btn-text{
+            font-size: 20px;
+        }
+        .button.join-btn .btn-text{
+            font-size: 20px;
+        }
+        .button.host-btn .btn-text{
+            font-size: 18px;
+            color: #232333;
+        }
+        .row {
+            text-align: center;
+        }
+        .row > h2.link {
+            font-size: 24px;
+            font-weight: bold;
+            color: #233333;
+            padding: 32px 0;
+            margin-bottom: 114px;
+        }
+        .row > h2.link a{
+            color: #0E71EB;
+        }
+        .row > h2.link a:hover {
+            text-decoration: underline;
+        }
+        .gov-logo {
+            width: 118px;
+            height: auto;
+        }
+        .faq-section {
+            padding: 0px 120px 90px 140px;
+            margin-top: -30px;
+            margin-bottom: 0;
+            background-color: #fff;
+        }
+        .faq-section .section-title {
+            font-weight: bold;
+            padding: 95px 0 20px 0;
+            color: #000;
+            font-size: 36px;
+            line-height: 43px;
+            text-align: center;
+        }
+        .faq-section .question {
+            font-size: 20px;
+            margin-top: 42px;
+            margin-bottom: 20px;
+            line-height: 29px;
+            text-align: left;
+            color: #233333;
+            font-weight: bold;
+        }
+        .faq-section .answer {
+            text-align: left;
+            line-height: 23px;
+            font-size: 20px;
+        }
+        .faq-section .answer .faq-last {
+            margin-top: -14px;
+        }
+        .footer {
+            text-align: left;
+            margin-top: 40px;
+        }
+        .footer a {
+            display: block;
+            font-size: 20px;
+            line-height: 24px;
+            padding-bottom: 10px;
+            color: #0E71EB;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer a:last-of-type{
+            padding-right: 0;
+        }
+        .usermenu {
+            display: table-row;
+            text-align: center;
+            vertical-align: middle;
+            background: #fff;
+            line-height: 163px;
+            padding: 0;
+            height: 163px;
+        }
+        .usermenu a img {
+            width: 67px;
+            vertical-align: middle;
+            overflow: hidden;
+        }
+        .usermenu a p {
+            margin: 0 0 0 21px;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 20px;
+            color: #0E71EB;
+            font-weight:bold;
+        }
+        .usermenu a p:hover {
+            text-decoration: underline;
+        }
+        .resources {
+            display: block;
+            background-color: #F0F5FB;
+            margin-top: -30px;
+            padding-bottom: 90px;
+            min-height: 595px;
+        }
+        .resources h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #000;
+            text-align: center;
+            padding: 78px 0 25px 0;
+            line-height: 43px;
+        }
+        .resources .row {
+            padding: 0 100px;
+            float: none;
+            display: flex;
+        }
+        .resources .row .col-md-4 {
+            width: calc(33.3% - 40px);
+            position: relative;
+            min-height: 1px;
+            margin-right: 20px;
+            margin-left: 20px;
+            min-height: 344px;
+            background-color: #fff;
+            float: left;
+        }
+        .container .resources .row .col-md-4 > div {
+            padding: 44px 42px;
+        }
+        .container .resources .row .col-md-4 > div > p {
+            font-size: 24px;
+            font-weight: bold;
+            color: #232333;
+            margin: 0 0 20px 0;
+            text-align: left;
+        }
+        .resources .button.host-btn {
+            margin-top: 70px;
+        }
+        .resources .button.host-btn > span {
+            font-size: 20px;
+            font-weight: normal;
+        }
+        .resources .subtitle {
+            padding: 0;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 20px;
+            color: #233333;
+            margin: 0;
+            width: 100%;
+            font-weight: normal;
+            line-height: 29px;
+            text-align: left;
+        }
+        .resources .phone {
+            margin-top: 32px;
+            font-size: 20px;
+            color: #233333;
+            text-align: left;
+        }
+        .resources .phone .item {
+            line-height: 1.8;
+        }
+        .resources .phone .item .bold {
+            font-weight: bold;
+        }
+        .gsa-logo {
+            width: 81px;
+            height: 84px;
+            vertical-align: middle;
+            padding-right: 14px;
+        }
+        .gsa-desc {
+            vertical-align: middle;
+            display: inline-block;
+            width: calc(100% - 105px);
+            font-size: 20px;
+            line-height: 29px;
+            color: #233333;
+        }
+        .top-banner button:before {
+            content: '\00d7';
+        }
+        @media (min-width:1200px) and (max-width: 1439px) {
+            .resources .row {
+                padding: 0 33px;
+            }
+            .resources .button.host-btn {
+                margin-top: 40px;
+            }
+        }
+        @media (min-width:768px) and (max-width: 1199px) {
+            .resources .row {
+                padding: 0;
+            }
+            .resources .row .col-md-4 {
+                width: calc(33.3% - 20px);
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+            .resources .button.host-btn {
+                margin-top: 20px;
+            }
+        }
+        @media (min-width:768px) and (max-width: 1439px) {
+            .content h1 {
+                padding-top: 150px;
+            }
+            .footer {
+                padding: 33px 0 70px 0;
+            }
+            .faq-section {
+                padding: 0px 80px 90px 80px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .content {
+                padding: 32px 30px 40px 30px;
+            }
+            .content .header{
+                padding: 48px 20px 40px 20px;
+            }
+            .content h1 {
+                padding: 31px 20px;
+                font-size: 36px;
+            }
+            .top-banner .btn {
+                top: 24px;
+            }
+            .top-banner p {
+                line-height: 18px;
+            }
+            h1 {
+                font-size: 27px;
+            }
+            .button.login-btn {
+                padding: 0 45px;
+            }
+            .row {
+                margin-bottom: 15px;
+            }
+            .row > h2 {
+                display: block;
+            }
+            .row > h2.link {
+                margin-bottom: 68px;
+            }
+            .content .row > h2 {
+                padding: 5px 20px 40px 20px;
+            }
+            .content .meeting-button a {
+                width: 192px;
+                padding: 0;
+                margin: 10px 0;
+            }
+            .faq-section {
+                padding: 20px 40px 50px 40px;
+                margin-top: -15px;
+            }
+            .faq-section .question {
+                margin-top: 20px;
+            }
+            .footer {
+                padding: 33px 0 180px 0;
+                height: 40px;
+            }
+
+            .footer a {
+                display: block;
+                width: 100%;
+                height: inherit;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .resources {
+                padding-bottom: 40px;
+                overflow: hidden;
+            }
+            .resources h2 {
+                padding: 78px 0 0 0;
+            }
+            .resources .row {
+                padding: 0 20px;
+                display: block;
+            }
+            .resources .row .col-md-4 {
+                width: calc(100% - 40px);
+                margin: 20px 20px 15px 20px;
+                height: 100%
+            }
+            .content {
+                margin: auto;
+            }
+            .content > div, .made-with {
+                text-align: center;
+            }
+            .content .meeting-button {
+                margin-bottom: 38px;
+            }
+            .usermenu {
+                line-height: 142px;
+            }
+            .usermenu div, .usermenu a {
+                text-align: left;
+                padding: 0 20px;
+            }
+            .usermenu a {
+                margin: 30px 0 50px 0 !important;
+            }
+            .usermenu div p, .usermenu a p {
+                width: calc(100% - 100px);
+                display: inline-block !important;
+            }
+            .usermenu div p a {
+                margin: 8px 0 !important;
+            }
+            .usermenu a img {
+                margin: 23px 0 !important;
+            }
+            .usermenu a p {
+                margin: 18px 0 23px 21px !important;
+            }
+            .faq-section .section-title {
+                padding: 80px 0 30px 0;
+            }
+        }
+        @media screen and (max-width: 557px) {
+            .top-banner p {
+                line-height: 18px;
+                margin: 12px 0;
+            }
+        }
+        @media screen and (max-width: 392px) {
+            .usermenu {
+                line-height: 40px;
+                height: 190px;
+            }
+            .usermenu a img {
+                margin-top: 23px;
+            }
+            .usermenu a p {
+                display: block;
+                margin: 10px 0 0 21px;
+            }
+        }
+        @media screen and (max-width: 380px) {
+            .resources .row {
+                padding: 0;
+            }
+            .usermenu {
+                display: table-row;
+                text-align: center;
+                vertical-align: middle;
+                background: #fff;
+                height: 183px;
+            }
+            .usermenu a {
+                margin: 35px 0;
+                display: block;
+            }
+            .usermenu a p {
+                margin: 18px 0 0 21px;
+                font-size: 20px;
+                color: #0E71EB;
+                line-height: 23px;
+                font-weight: bold;
+            }
+        }
+        @media screen and (max-width: 447px) {
+            .content .meeting-button a {
+                display: block;
+            }
+            .content .meeting-button .join-btn,
+            .content .meeting-button .host-btn {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style></head><body>
+<div class="container">
+    <div class="content-body" role="main" aria-label="main content">
+        <div class="HiddenText"><a id="the-main-content" tabindex="-1"></a></div>
+        <div class="content" style="padding:0">
+            <div class="header">
+                <div class="right">
+                    <a href="/signin" class="button login-btn">
+                        <span class="btn-text">Sign in</span>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <img src=https://www.zoomgov.com/account/branding/p/8578664b-68fb-43b3-9e55-4cbaef24e406.png />
+              <h1> Zoom for Government </h1>
+                <div class="meeting-button">
+                    <a href="/join" class="button join-btn">
+                        <span class="btn-text">Join a meeting</span>
+                    </a>
+                    <a href="/start/videomeeting" class="button host-btn">
+                        <span class="btn-text">Host a meeting</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="usermenu" style="height:185px;margin-bottom:10px;line-height:185px">
+            <div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="usermenu" style="height:inherit"></div>
+  
+    <div class="faq-section">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="item">
+            <span class="bold">Online:</span>
+            <a href=https://support.zoomgov.com/>Submit Support Request</a>
+        </div>
+        <div class="question">What is Zoom for Government?</div>
+        <div class="answer">
+            <p>Zoom for Government is a <a href=https://marketplace.fedramp.gov/#/product/zoom-for-government?sort=productName&amp;productNameSearch=zoom>FedRAMP Authorized SaaS service</a> operating at the Moderate baseline with reciprocity to DoD Impact Level 2. Zoom for Government has also received an Authorization to Operate with Conditions at Department of Defense Impact Level 4 (ATO-C) for Zoom Meetings with the Department of the Air Force. The Zoom for Government platform utilizes AWS GovCloud and U.S.-based co-located data centers and is managed by U.S. Persons only. The platform leverages FIPS 140-2 validated cryptographic solutions and 256-bit AES-GCM encryption.</p>
+            <p>While built for U.S. federal agencies, Zoom for Government is also available to U.S. state and local government customers, as well as other approved businesses and organizations that support the U.S. government.</p>
+        </div>
+        <div class="question">Where are the data centers and storage locations for Zoom for Government?</div>
+        <div class="answer">
+            <p>Zoom for Government co-located data centers and storage locations are CONUS (Continental U.S.) only.</p>
+        </div>
+        <div class="question">What's the difference between Zoom for Government and the commercial Zoom platform?</div>
+        <div class="answer">
+            <p>Zoom for Government provides its users with the same seamless, secure, and reliable Zoom experience, but operates in a dedicated, secure infrastructure designed to meet the requirements of the FedRAMP Moderate baseline and DoD Impact Level 2.</p>
+            <p>While the commercial Zoom platform and the Zoom for Government platform share the same code base, there are distinct and purposeful differences in the Zoom for Government System Development Life Cycle. In addition, the Zoom for Government platform is managed by U.S. Persons only, and all customer-generated data remains within the Zoom for Government boundary in CONUS.</p>
+            <p>Zoom for Government updates are generally released on a separate schedule, which can be up to several weeks after the changes are made on the commercial Zoom platform.</p>
+            <p>Zoom for Government is subject to FedRAMP Moderate baseline controls and continuous compliance monitoring in accordance with the FedRAMP program guidelines. </p>
+        </div>
+    </div>
+</div>
+</body></html>
