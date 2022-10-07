@@ -62,7 +62,7 @@
         .content .meeting-button a {
             height: 48px;
             line-height: 48px;
-            border-radius: 12px;
+            border-radius: 3px;
         }
         .content .meeting-button .join-btn{
             margin-right: 20px;
@@ -253,6 +253,11 @@
             float: none;
             display: flex;
         }
+        .whitebg .row {
+            padding: 0 100px;
+            float: none;
+            display: flex;
+        }
         .resources .row .col-md-4 {
             width: calc(33.3% - 40px);
             position: relative;
@@ -337,12 +342,18 @@
             .resources .row {
                 padding: 0 33px;
             }
+            .whitebg .row {
+                padding: 0 33px;
+            }
             .resources .button.host-btn {
                 margin-top: 40px;
             }
         }
         @media (min-width:768px) and (max-width: 1199px) {
             .resources .row {
+                padding: 0;
+            }
+            .whitebg .row {
                 padding: 0;
             }
             .resources .row .col-md-4 {
@@ -536,7 +547,8 @@
             <div class="header">
               <img src="img/ACF-Logo_FullWhite.png" width="60%"/>
             </div>
-            <div class="row whitebg">
+            <div class="whitebg">
+            <div class="row">
               <div class="col-md-4 sec">
                   <div style="text-align:center">
                       <p class="title" style="text-align:left">Welcome to ACF Zoom Conferencing</p>
@@ -558,7 +570,7 @@
               <div class="col-md-8 sec">
               </div>
             </div>
-
+          </div>
         </div>
         <div class="usermenu" style="height:185px;margin-bottom:10px;line-height:185px">
             <div>
